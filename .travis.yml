@@ -32,8 +32,9 @@ script:
   - goveralls -coverprofile=coverage.out -service=jude -repotoken $COVERALLS_REPO_TOKEN
   - cd $CURRENT_DIR/frontend
   - nvm use 5
-  - npm test
+  - npm run test
   - nvm use 6
-  - npm test
+  - npm run test
   - nvm use 7
-  - npm test
+  - npm run test
+  - npm run coveralls
