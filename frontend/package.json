@@ -7,7 +7,14 @@
     "dev": "gulp",
     "start": "gulp",
     "build": "gulp build",
-    "test": "mocha --compilers js:babel-core/register"
+    "test": "jest --coverage",
+    "coveralls": "cat ./reports/lcov.info | coveralls"
+  },
+  "jest": {
+    "coverageReporters": [
+      "lcov"
+    ],
+    "coverageDirectory": "reports"
   },
   "author": "",
   "license": "MIT",
@@ -26,6 +33,7 @@
     "babel-preset-stage-3": "^6.5.0",
     "classnames": "^2.2.5",
     "cors": "^2.7.1",
+    "coveralls": "^2.11.15",
     "css-loader": "^0.23.1",
     "es6-promise": "^3.1.2",
     "eslint": "^2.13.1",
@@ -38,6 +46,8 @@
     "gulp-babel": "^6.1.2",
     "gulp-util": "^3.0.7",
     "gulp-webpack": "^1.5.0",
+    "jest": "^17.0.3",
+    "jest-cli": "^18.0.0",
     "node-sass": "^3.7.0",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
