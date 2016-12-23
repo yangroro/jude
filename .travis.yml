@@ -37,5 +37,5 @@ script:
   - npm run test
   - nvm use 7
   - npm run test
-  - sed 's/SF\:.*src/SF:https:\/\/github.com\/Flative\/jude\/blob\/master\/frontend\/src/g' reports/lcov.info
+  - sed 's/SF\:.*src/SF:https:\/\/github.com\/Flative\/jude\/blob\/master\/frontend\/src/g' reports/lcov.info > reports/lcov.info
   - npm run coveralls
